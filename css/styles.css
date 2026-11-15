@@ -1,0 +1,166 @@
+/* Reset de estilos */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*logo, nombre de la cooperativa y menu*/
+.H1GDC, .H2CL{
+  color: #ffffff;
+}
+.H1GDC{
+  font-size: 1.4rem;
+}
+.H2CL{
+  font-size: 0.9rem;
+  font-weight: 400;
+} 
+.logo img{
+  width: auto;
+  height: 60px;
+  display: block;
+}
+/*estilos de barra de navegacion*/
+.barraprincipal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*estilos de menu de navegacion*/
+.menuheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  gap: 20px;
+  padding: 15px 30px;
+  margin: 0px;
+  list-style: none;
+  background-color: #1b3f6f;
+}
+.menuheader li{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.menu a{
+  display: block;
+  white-space: nowrap;
+  border: 1.2px solid #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.menu a:hover {
+    background-color: #ffffff;
+    color: #1b3f6f;
+    transition: 0.3s;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.8rem;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  background-color: #1B3F6E;
+}
+.social-icon img{
+  display: flex;
+  width: 30px;
+  height: auto;
+  align-items: left;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* lista de menu de navegacion*/
+ul{
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  gap: 30px; 
+  padding: 0px;
+  margin: 0rem;
+}
+/*tipografia de cuerpo*/
+body{
+  font-family: 'Roboto', sans-serif;
+}
+/*instructivo de como usar la pagina*/
+.instructivo-img{
+  display: block;
+  width: 400px;
+  height: auto;
+}
+.instructivo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 50px;
+}
+/*tarjetas*/
+.tarjetas{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.tarjeta{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  align-items: center;
+  justify-content: center;
+}
+.tarjeta.destacada{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-direction: column;
+}
+.tarjeta.destacada p{
+  font-size: 3rem;  
+  margin-bottom: 10px;
+}
+.preciosypromedios{
+  padding: 20px;
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  justify-content: center;
+}
+.preciosypromedios h3{
+  font-size: 1.8rem;
+}
+/*layout general*/
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.unidades-negocios, .lotes-disponibles{
+  margin-bottom: 50px;
+}
+.tarjeta span{
+  font-size: 1rem;
+  color: #6f6f6f;
+}
