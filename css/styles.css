@@ -45,7 +45,6 @@ img {
 }
 .menuheader li{
   display: inline-block;
-  justify-content: center;
   align-items: center;
   width: auto;
 }
@@ -78,7 +77,6 @@ header{
 }
 /*redes sociales - iconos*/
 .social-icon img{
-  display: flex;
   width: 30px;
   height: auto;
   text-decoration: none;
@@ -161,8 +159,16 @@ body{
   text-align: center;
   justify-content: center;
 }
-.preciosypromedios h3{
+h3{
   font-size: 1.8rem;
+  text-align: center;
+}
+h4{
+  font-size: 1.4rem;
+  text-align: center;
+}
+p{
+  font-size: 1rem;
 }
 /*layout general*/
 main{
@@ -191,6 +197,24 @@ main{
 .content{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   padding: 20px;
+}
+.btn{
+  background-color: #1B3F6E;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input, textarea {
+  font-family: inherit;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.titulo-tarjeta{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
