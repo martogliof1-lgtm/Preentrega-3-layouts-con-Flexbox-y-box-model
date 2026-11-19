@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 /*logo, nombre de la cooperativa y menu*/
 .H1GDC, .H2CL{
   color: #ffffff;
@@ -22,6 +26,7 @@
 }
 /*estilos de barra de navegacion*/
 .barraprincipal{
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,14 +51,13 @@
 }
 .menu a{
   display: block;
-  white-space: nowrap;
   border: 1.2px solid #ffffff;
-  font-size: 1.2rem;
   text-decoration: none;
   text-align: center;
   padding: 10px;
   border-radius: 30px;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 .menu a:hover {
     background-color: #ffffff;
@@ -63,7 +67,6 @@
 a{
   text-decoration: none;
   color: inherit;
-  font-size: 1.8rem;
 }
 header{
   display: flex;
@@ -73,17 +76,24 @@ header{
   padding: 15px 30px;
   background-color: #1B3F6E;
 }
+/*redes sociales - iconos*/
 .social-icon img{
   display: flex;
   width: 30px;
   height: auto;
-  align-items: left;
   text-decoration: none;
   color: #FFFFFF;
+}
+.redes-sociales{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 /* lista de menu de navegacion*/
 ul{
   list-style: none;
+  flex-wrap: wrap;
   text-decoration: none;
   display: flex;
   color: #FFFFFF;
@@ -99,11 +109,18 @@ body{
 /*instructivo de como usar la pagina*/
 .instructivo-img{
   display: block;
-  width: 400px;
+  max-width: 100%;
   height: auto;
 }
+/* con el resto de tus reglas */
+.instructivo-img { grid-area: imagen; max-width: 100%; 
+}
+.instructivo-texto { grid-area: texto;
+}
 .instructivo{
-  display: flex;
+  display: grid;
+  grid-template-areas: "imagen" "texto";
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -113,27 +130,22 @@ body{
 }
 /*tarjetas*/
 .tarjetas{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
   padding: 20px;
 }
 .tarjeta{
-  display: flex;
-  flex-direction: column;
   padding: 20px;
   border: 1px solid #000000;
   border-radius: 10px;
-  flex: 1 1 300px;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .tarjeta.destacada{
   font-size: 1.2rem;
   margin-bottom: 10px;
-  flex-basis: 100%;
-  flex-grow: 0;
-  flex-direction: column;
+  grid-column: 1 / -1;
 }
 .tarjeta.destacada p{
   font-size: 3rem;  
@@ -163,4 +175,22 @@ main{
 .tarjeta span{
   font-size: 1rem;
   color: #6f6f6f;
+}
+.identidad{
+  flex-direction: column;
+}
+/* al final del archivo */
+@media (min-width: 1024px) {
+  .instructivo {
+    grid-template-areas: "imagen texto";
+    grid-template-columns: 1fr 1fr;
+  }
+  .instructivo-img { max-width: 400px; }
+}
+/*contenido de formulario de contactos*/
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
