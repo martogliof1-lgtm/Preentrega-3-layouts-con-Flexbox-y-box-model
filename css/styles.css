@@ -43,11 +43,6 @@ img {
   list-style: none;
   background-color: #1b3f6f;
 }
-.menuheader li{
-  display: inline-block;
-  align-items: center;
-  width: auto;
-}
 .menu a{
   display: block;
   border: 1.2px solid #ffffff;
@@ -57,12 +52,12 @@ img {
   border-radius: 30px;
   cursor: pointer;
   font-size: 1.2rem;
+  transition: 0.3s ease-out;
 }
 .menu a:hover {
     background-color: #ffffff;
     color: #1b3f6f;
-    transition: 0.3s;
-}
+    }
 a{
   text-decoration: none;
   color: inherit;
@@ -111,7 +106,8 @@ body{
   height: auto;
 }
 /* con el resto de tus reglas */
-.instructivo-img { grid-area: imagen; max-width: 100%; 
+.instructivo-img { grid-area: imagen; 
+  max-width: 100%; 
 }
 .instructivo-texto { grid-area: texto;
 }
@@ -129,7 +125,8 @@ body{
 /*tarjetas*/
 .tarjetas{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 
+  minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -183,15 +180,9 @@ main{
   color: #6f6f6f;
 }
 .identidad{
-  flex-direction: column;
-}
-/* al final del archivo */
-@media (min-width: 1024px) {
-  .instructivo {
-    grid-template-areas: "imagen texto";
-    grid-template-columns: 1fr 1fr;
-  }
-  .instructivo-img { max-width: 400px; }
+  display: flex;
+  align-items: center;
+
 }
 /*contenido de formulario de contactos*/
 .content{
@@ -207,14 +198,34 @@ main{
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.btn:hover {
+  background-color: #2a5a9e;
+}
+.btn:active {
+  transform: translateY(1px);
 }
 input, textarea {
   font-family: inherit;
   padding: 10px;
   border: 1px solid #ccc;
 }
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #1b3f6f;
+  outline-offset: 2px;
+}
 .titulo-tarjeta{
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+}
+/* al final del archivo */
+@media (min-width: 1024px) {
+  .instructivo {
+    grid-template-areas: "imagen texto";
+    grid-template-columns: 1fr 1fr;
+  }
+  .instructivo-img { max-width: 400px; }
 }
