@@ -63,22 +63,55 @@
     <main>
         <section class="sucursales">
             <h3>Nuestras sucursales</h3>
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h5 class="titulo-tarjeta">Ceres</h5>
-                    <p>Dirección: Juan de Garay 198</p>
-                    <p>Teléfono: 3491420216</p>
-                </article>
-                <article class="tarjeta">
-                    <h5 class="titulo-tarjeta">San Cristobal</h5>
-                    <p>Dirección: Implementación 456</p>
-                    <p>Teléfono: 3491420216</p>
-                </article>
-                <article class="tarjeta">
-                    <h5 class="titulo-tarjeta">Tostado</h5>
-                    <p>Dirección: Calle 123</p>
-                    <p>Teléfono: 3491420216</p>
-                </article>
+            <div class="accordion" id="acordeonSucursales">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sucursal1"
+                            aria-expanded="true" aria-controls="sucursal1">
+                            Ceres
+                        </button>
+                    </h3>
+                    <div id="sucursal1" class="accordion-collapse collapse show" data-bs-parent="#acordeonSucursales">
+                        <div class="accordion-body">
+                            <p>Dirección</p>
+                            <p>Teléfono</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sucursal2"
+                            aria-controls="sucursal2"
+                            aria-expanded="false">
+                            Tostado
+                        </button>
+                    </h3>
+                    <div id="sucursal2" class="accordion-collapse collapse" data-bs-parent="#acordeonSucursales">
+                        <div class="accordion-body">
+                            <p>Dirección</p>
+                            <p>Teléfono</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sucursal3"
+                            aria-controls="sucursal3"
+                            aria-expanded="false">
+                            San Cristobal
+                        </button>
+                    </h3>
+                    <div id="sucursal3" class="accordion-collapse collapse" data-bs-parent="#acordeonSucursales">
+                        <div class="accordion-body">
+                            <p>Dirección</p>
+                            <p>Teléfono</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
