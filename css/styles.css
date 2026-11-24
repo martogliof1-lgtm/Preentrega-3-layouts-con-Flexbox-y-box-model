@@ -11,8 +11,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: normal;
+}
 .navbar-brand img {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
 /*logo, nombre de la cooperativa y menu*/
@@ -20,11 +26,16 @@ img {
   color: #ffffff;
 }
 .H1GDC{
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 .H2CL{
-  font-size: 0.9rem;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 } 
 /*estilos de barra de navegacion*/
 .navbar {
@@ -33,6 +44,7 @@ img {
 .navbar .nav-link {
   position: relative;
   transition: color 0.25s ease-out;
+  color: #ffffff;
 }
 .barrasecundaria {
   background-color: #4ab2c7;
@@ -50,7 +62,6 @@ img {
   transition: transform 0.25s ease-out;
   transform-origin: center;
 }
-
 .navbar .nav-link:hover::after,
 .navbar .nav-link:focus-visible::after,
 .navbar .nav-link.active::after {
@@ -61,35 +72,7 @@ img {
   flex-direction: column;
   line-height: 1.2;
 }
-.barraprincipal{
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 /*estilos de menu de navegacion*/
-.menuheader{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #FFFFFF;
-  gap: 20px;
-  padding: 15px 30px;
-  margin: 0px;
-  list-style: none;
-  background-color: #1b3f6f;
-}
-.menu a{
-  display: block;
-  border: 1.2px solid #ffffff;
-  text-decoration: none;
-  text-align: center;
-  padding: 10px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: 0.3s ease-out;
-}
 a{
   text-decoration: none;
   color: inherit;
@@ -128,10 +111,6 @@ body{
   display: block;
   max-width: 100%;
   height: auto;
-}
-/* con el resto de tus reglas */
-.instructivo-img { grid-area: imagen; 
-  max-width: 100%; 
 }
 .instructivo-texto { grid-area: texto;
 }
@@ -202,11 +181,6 @@ main{
   font-size: 1rem;
   color: #6f6f6f;
 }
-.identidad{
-  display: flex;
-  align-items: center;
-
-}
 /*contenido de formulario de contactos*/
 .content{
   display: flex;
@@ -244,11 +218,95 @@ textarea:focus-visible {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* al final del archivo */
+.carousel-item img {
+  height: 240px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 12%;
+  opacity: 1;
+  transition: background 0.3s ease-out;
+}
+.carousel-control-prev {
+  background: linear-gradient(
+    to right,
+    rgba(20, 56, 102, 0.549),
+    rgba(20, 56, 102, 0.251) 45%,
+    rgba(20, 56, 102, 0) 100%
+  );
+}
+.carousel-control-next {
+  background: linear-gradient(
+    to left,
+    rgba(20, 56, 102, 0.549),
+    rgba(20, 56, 102, 0.251) 45%,
+    rgba(20, 56, 102, 0) 100%
+  );
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus-visible {
+  background: linear-gradient(
+    to right,
+    rgba(20, 56, 102, 0.8),
+    rgba(20, 56, 102, 0.4) 45%,
+    rgba(20, 56, 102, 0) 100%
+  );
+}
+.carousel-control-next:hover,
+.carousel-control-next:focus-visible {
+  background: linear-gradient(
+    to left,
+    rgba(20, 56, 102, 0.8),
+    rgba(20, 56, 102, 0.4) 45%,
+    rgba(20, 56, 102, 0) 100%
+  );
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 32px;
+  height: 32px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  transition: opacity 0.25s ease-out;
+}
+.accordion-button {
+  background-color: #ffffff;
+  color: #1b3f6f;
+  font-weight: 700;
+  transition: background-color 0.25s ease-out;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #1b3f6f;
+  color: #ffffff;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+.accordion-button:focus {
+  box-shadow: none;
+  outline: 2px solid #1b3f6f;
+  outline-offset: -2px;
+}
+.accordion-body {
+  background-color: #f4f6f9;
+}
+/*esto siempre al final - abajo de todo*/
 @media (min-width: 1024px) {
   .instructivo {
     grid-template-areas: "imagen texto";
     grid-template-columns: 1fr 1fr;
   }
-  .instructivo-img { max-width: 400px; }
+  .instructivo-img { max-width: 80px; }
+  .carousel-item img {
+    height: 550px;
+  }
+  .H1GDC { font-size: 1.6rem; }
+  .H2CL  { font-size: 1.2rem; }
 }
