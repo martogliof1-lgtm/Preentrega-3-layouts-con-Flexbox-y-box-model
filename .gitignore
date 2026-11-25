@@ -1,0 +1,10 @@
+# Ignorar carpetas de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar configuracion local del editor
+.vscode/
+
+# Ignorar dependencias (cuando uses herramientas mas avanzadas)
+node_modules/
