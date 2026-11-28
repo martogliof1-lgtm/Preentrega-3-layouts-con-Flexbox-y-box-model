@@ -9,7 +9,7 @@ https://martogliof1-lgtm.github.io/Preentrega-3-layouts-con-Flexbox-y-box-model/
 ## Secciones
 
 - **Inicio** — Informacion
-- **Remates** — Reamte
+- **Remates** — Cartelera de remates
 - **Precios y promedios** — Precios
 - **Sucursales** — Sucursales y representantes
 - **Quiénes somos** — Nuestro equipo
